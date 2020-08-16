@@ -1,7 +1,7 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
 
 class ShopifyMakersClubDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
@@ -10,9 +10,7 @@ class ShopifyMakersClubDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Shopify Makers Club</title>
           <meta charSet="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta
             name="description"
             content="An exclusive community of professionals building and growing apps on the Shopify platform."

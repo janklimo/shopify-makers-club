@@ -4,6 +4,10 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Shopify Makers Club</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <section className={`${styles.hero} pt-32`}>
         <div className="pl-40">
           <h1 className="text-6xl font-bold text-gray-700 mb-6">Shopify Makers Club</h1>
