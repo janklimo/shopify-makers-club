@@ -1,7 +1,24 @@
 import Head from "next/head";
+import { useState, MouseEvent } from "react";
+import { useTransition, animated } from "react-spring";
+
+import MembershipForm from "../components/MembershipForm";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const transitions = useTransition(isModalOpen, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
+
   return (
     <>
       <Head>
@@ -17,12 +34,19 @@ export default function Home() {
           </p>
           <a
             href="#"
+            onClick={openModal}
             className="uppercase text-white bg-brand-light font-bold py-6 px-10 rounded-full hover:bg-brand-dark"
           >
             Join Now
           </a>
         </div>
       </section>
+      {transitions.map(
+        ({ item, key, props: style }) =>
+          item && (
+            <MembershipForm style={style} key={key} closeModal={() => setIsModalOpen(false)} />
+          )
+      )}
     </>
   );
 }
