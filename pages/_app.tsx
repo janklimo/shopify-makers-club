@@ -1,3 +1,4 @@
+import "whatwg-fetch";
 import { AppProps } from "next/app";
 
 import "../styles/index.css";

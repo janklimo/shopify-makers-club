@@ -11,6 +11,7 @@
   "author": "Jan Klimo",
   "license": "MIT",
   "dependencies": {
-    "@sendgrid/mail": "^7.2.3"
+    "@sendgrid/mail": "^7.2.3",
+    "whatwg-fetch": "^3.4.0"
   }
 }
