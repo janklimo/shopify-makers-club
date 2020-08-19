@@ -19,6 +19,7 @@ module.exports = {
       white: "#fff",
 
       brand: {
+        lighter: "#8e99da",
         light: "#5260B6",
         dark: "#3D4B9A",
       },
