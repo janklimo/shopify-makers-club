@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "postinstall": "netlify-lambda install"
   },
   "dependencies": {
+    "netlify-lambda": "^2.0.1",
     "next": "9.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",

@@ -1,0 +1,16 @@
+{
+  "name": "new-membership-application",
+  "version": "1.0.0",
+  "description": "Process form submission",
+  "main": "new-membership-application.js",
+  "keywords": [
+    "netlify",
+    "serverless",
+    "js"
+  ],
+  "author": "Jan Klimo",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.3"
+  }
+}
