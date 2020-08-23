@@ -25,7 +25,23 @@ export default function Home() {
         <title>Shopify Makers Club</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <section className={`${styles.hero} pt-32`}>
+      <section className="py-24 px-4 bg-white md:hidden">
+        <img src="/banner-mobile.svg" alt="Shipify Makers Club" className="w-full mb-8" />
+        <h1 className="text-4xl font-bold text-gray-700 mb-6 text-center">Shopify Makers Club</h1>
+        <p className="font-light text-xl text-center text-gray-600 mb-12">
+          An exclusive community of professionals building and growing apps on the Shopify platform.
+        </p>
+        <div className="text-center">
+          <a
+            href="#"
+            onClick={openModal}
+            className="uppercase text-white bg-brand-light font-bold py-6 px-10 rounded-full hover:bg-brand-dark"
+          >
+            Join Now
+          </a>
+        </div>
+      </section>
+      <section className={`${styles.hero} pt-32 hidden md:block`}>
         <div className="pl-40">
           <h1 className="text-6xl font-bold text-gray-700 mb-6">Shopify Makers Club</h1>
           <p className="font-light text-2xl text-gray-600 mb-20 w-1/3">
