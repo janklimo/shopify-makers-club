@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState, MouseEvent } from "react";
-import { useTransition, animated } from "react-spring";
+import { useTransition } from "react-spring";
 
 import MembershipForm from "../components/MembershipForm";
 import styles from "../styles/Home.module.css";

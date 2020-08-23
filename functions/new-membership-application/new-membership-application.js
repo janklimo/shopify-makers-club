@@ -1,7 +1,7 @@
 const sendgrid = require("@sendgrid/mail");
 
 const invalidInput = () => ({
-  statusCode: 200,
+  statusCode: 500,
   body: JSON.stringify({ message: "No email provided." }),
 });
 
@@ -12,7 +12,7 @@ exports.handler = async function (event) {
     return invalidInput();
   }
 
-  const { email } = JSON.parse(event.body);
+  const { email, expectations, link, name, work } = JSON.parse(event.body);
 
   if (!email) {
     return invalidInput();
@@ -24,9 +24,24 @@ exports.handler = async function (event) {
       email: process.env.EMAIL_SENDER,
       name: "Jan @ Shopify Makers Club",
     },
-    subject: "Sending with Twilio SendGrid is Fun",
-    text: "and easy to do anywhere, even with Node.js",
-    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+    subject: `New Application: ${name}`,
+    html: `
+      <p>
+        <b>Name</b>: ${name}
+      </p>
+      <p>
+        <b>Email</b>: ${email}
+      </p>
+      <p>
+        <b>Link</b>: ${link}
+      </p>
+      <p>
+        <b>Work</b>: ${work}
+      </p>
+      <p>
+        <b>Expectations</b>: ${expectations}
+      </p>
+    `,
   };
 
   try {
