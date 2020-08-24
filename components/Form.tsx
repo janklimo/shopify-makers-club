@@ -63,7 +63,7 @@ const Form: FunctionComponent<Props> = ({
   };
 
   return (
-    <animated.div style={style} className="bg-white shadow-lg p-8 max-w-xl rounded-lg fixed mx-1">
+    <animated.div style={style} className="bg-white shadow-lg p-8 max-w-xl rounded-lg fixed m-1">
       <h1 className="text-3xl mb-4">Hello{name && `, ${name}`} 👋</h1>
       <p className="text-gray-600">
         Thank you for your interest in joining Shopify Makers Club. Please tell us more about

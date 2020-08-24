@@ -19,7 +19,7 @@ exports.handler = async function (event) {
   }
 
   const msg = {
-    to: email,
+    to: process.env.EMAIL_SENDER,
     from: {
       email: process.env.EMAIL_SENDER,
       name: "Jan @ Shopify Makers Club",

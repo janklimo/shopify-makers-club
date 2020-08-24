@@ -22,7 +22,7 @@ const MembershipForm: FunctionComponent<Props> = ({ style, closeModal }) => {
   return (
     <animated.div
       style={style}
-      className="flex justify-center items-center bg-brand-light w-full h-full fixed top-0 left-0"
+      className="fixed top-0 left-0 overflow-y-scroll md:flex justify-center items-center bg-brand-light w-full h-full"
     >
       {transitions.map(({ item, key, props: style }) =>
         item ? (

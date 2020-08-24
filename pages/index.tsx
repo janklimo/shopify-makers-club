@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </section>
       <section className={`${styles.hero} pt-32 hidden md:block`}>
-        <div className="pl-40">
+        <div className="pl-20 lg:pl-32 xl:pl-40">
           <h1 className="text-6xl font-bold text-gray-700 mb-6">Shopify Makers Club</h1>
           <p className="font-light text-2xl text-gray-600 mb-20 w-1/3">
             An exclusive community of professionals building and growing apps on the Shopify
