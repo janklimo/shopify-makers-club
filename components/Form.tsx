@@ -93,7 +93,7 @@ const Form: FunctionComponent<Props> = ({
             value={email}
             placeholder="name@example.com"
             onChange={(event) => setEmail(event.target.value)}
-            type="text"
+            type="email"
           />
         </div>
         <div className="mb-3">
@@ -106,7 +106,7 @@ const Form: FunctionComponent<Props> = ({
             value={link}
             placeholder="Twitter handle, personal site, etc"
             onChange={(event) => setLink(event.target.value)}
-            type="text"
+            type="url"
           />
         </div>
         <div className="mb-3">
